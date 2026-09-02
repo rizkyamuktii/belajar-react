@@ -1,6 +1,17 @@
 import { Table, Container, Badge, Card, Row, Col, Button } from "react-bootstrap";
+import UserModal from "../components/UserModal";
+import { useState } from "react";
 
 const User = () => {
+    const [show, setShow] = useState(false);
+    const handleCreate = () => {
+        setShow(true);
+    };
+    const handleCloseModal = () => {
+        setShow(false);
+    };
+    
+
     return (
         <Container className="py-4">
             <Card className="shadow-sm border-0">
@@ -11,7 +22,7 @@ const User = () => {
                             <p className="text-muted mb-0">Data User Management</p>
                         </Col>
                         <Col xs="auto">
-                            <Button variant="primary">+ Create New User</Button>
+                            <Button variant="primary" onClick={handleCreate}>+ Create New User</Button>
                         </Col>
                     </Row>
 
@@ -37,7 +48,11 @@ const User = () => {
                     </Table>
                 </Card.Body>
             </Card>
+
+            <UserModal show={show} handleClose={handleCloseModal} />
+
         </Container>
+
     );
 };
 
