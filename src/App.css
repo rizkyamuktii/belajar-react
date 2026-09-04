@@ -1,6 +1,6 @@
 .container {
   max-width: 720px;
-  margin: 40px auto;
+  margin: 0 16px;
   padding: 0 16px;
 }
 
@@ -10,11 +10,10 @@ header {
 }
 
 header h1 {
-  font-size: 1, 8rem;
+  font-size: 1.8rem;
   margin: 0 0 8px 0;
   /* margin-bottom: 8px; */
-
-  color: rgb(3, 2, 0);
+  color: #0f172a;
 }
 
 .form-card {
@@ -25,6 +24,7 @@ header h1 {
   border: 1px solid whitesmoke;
   margin-bottom: 32px;
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -35,12 +35,12 @@ header h1 {
 .form-group label {
   font-weight: bold;
   font-size: 1rem;
-  color: rgb(0, 0, 0) ;
+  color: #475569;
 }
 
 .form-group input {
   padding: 10px 12px;
-  border: 1px solid black;
+  border: 1px solid #475569;
   border-radius: 8px;
   font-size: 0.9rem;
   outline: none;
@@ -50,22 +50,24 @@ header h1 {
 .form-group input:focus {
   border-color: #2563eb;
 }
+
 .btn-submit {
   width: 100%;
   background-color: #2563eb;
   color: white;
-  padding: 12px;
   border: none;
-  border-radius: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
   font-weight: 800;
   cursor: pointer;
   transition: background-color 0.2s;
 }
+
 .btn-submit:hover {
   background-color: #1d4ed8;
 }
 
-.student-list h2 {
+.student-list {
   font-size: 1.3rem;
   color: #334155;
   margin-bottom: 16px;
